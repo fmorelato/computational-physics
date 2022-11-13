@@ -19,13 +19,13 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = check1 check2 check3 time1 time2
+MAIN = check1 check2 check3 time1 time2 prova_azione
 
 RANDOM = ranlxs ranlxd gauss
 
 START = start utils
 
-EXTRAS = 
+EXTRAS = azione
 
 MODULES = $(RANDOM) $(START) $(EXTRAS)
 

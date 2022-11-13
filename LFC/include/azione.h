@@ -3,6 +3,6 @@
 
 
 #ifndef AZIONE_C
-extern float azione()
+extern float azione();
 #endif
 #endif

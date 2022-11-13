@@ -1,15 +1,18 @@
+#define MAIN_PROGRAM
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "/home/federico/Scrivania/LFC/include/azione.h"
+#include "../../include/azione.h"
+#include "../../include/global.h"
 
 
 int main() {
 
 float s;
-
-    for(int i=0; i<N; i++){
-        scanf("%f",&xx[i]);
+int i;
+    for(i=0; i<N; i++){
+        scanf("%lf",&xx[i]);
     }
 s = azione();
 printf("il valore dell'azione è %f", s );
