@@ -25,16 +25,18 @@ RANDOM = ranlxs ranlxd gauss
 
 START = start utils
 
-EXTRAS = azione
+EXTRAS = 
 
-MODULES = $(RANDOM) $(START) $(EXTRAS)
+MONTECARLO = azione
+
+MODULES = $(RANDOM) $(START) $(MONTECARLO) $(EXTRAS) 
 
 
 # search path for modules
 
 MDIR = ../../modules
 
-VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras
+VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras:$(MDIR)/montecarlo
 
 
 # additional include directories
@@ -46,13 +48,13 @@ INCPATH = ../../include
  
 LIBS = m
 
-LIBPATH =
+LIBPATH = 
 
 
 # scheduling and optimization options (such as -DSSE -DSSE2 -DP4)
  
 CFLAGS = -std=c89 -pedantic -fstrict-aliasing \
-         -Wall -Wno-long-long -Werror -O 
+         -Wall -Wno-long-long -O 
  
 
 ############################## do not change ###################################
