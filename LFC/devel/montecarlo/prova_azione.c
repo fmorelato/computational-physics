@@ -6,14 +6,16 @@
 #include "../../include/azione.h"
 #include "../../include/global.h"
 
-
 int main() {
 
-float s;
-int i;
-    for(i=0; i<N; i++){
-        scanf("%lf",&xx[i]);
+
+double s;
+int j;
+
+    for(j=0; j<N; j++){
+        scanf("%f",&xx[j]);
     }
+
 s = azione();
 printf("il valore dell'azione è %f", s );
 
