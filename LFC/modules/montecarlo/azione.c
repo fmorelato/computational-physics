@@ -1,22 +1,25 @@
-#define RANLXD_C
+#define AZIONE_C
 
 #include <limits.h>
 #include <float.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-//#include "start.h"
+
+#include "../../include/global.h"
 
 
-float Azione()
+double azione()
 
 {
 
-float S=0;
+double S=0;
+int i;
 
-    for (int i=0; i<N; i++){
-        S  = S + M/2*(xx[i+1]-x[i])*(xx[i+1]-x[i])-M/2*W*W*(xx[i])*(xx[i]);
+    for (i=0; i<N; i++){
+        S  = S + M/2.0*(xx[(i+1)%N]-xx[i])*(xx[(i+1)%N]-xx[i])-M/2.0*W*W*(xx[i])*(xx[i]);
     }
 
 return S;
+
 }
