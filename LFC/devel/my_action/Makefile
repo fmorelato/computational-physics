@@ -19,7 +19,9 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = check1 check2 check3 time1 time2
+MAIN = check_my_action #check1 check2 check3 time1 time2 check_my_action
+
+MYACTION = my_action
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -27,14 +29,14 @@ START = start utils
 
 EXTRAS = 
 
-MODULES = $(RANDOM) $(START) $(EXTRAS)
+MODULES = $(RANDOM) $(START) $(EXTRAS) $(MYACTION)
 
 
 # search path for modules
 
 MDIR = ../../modules
 
-VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras
+VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras:$(MDIR)/my_action
 
 
 # additional include directories
@@ -52,7 +54,7 @@ LIBPATH =
 # scheduling and optimization options (such as -DSSE -DSSE2 -DP4)
  
 CFLAGS = -std=c89 -pedantic -fstrict-aliasing \
-         -Wall -Wno-long-long -O #-Werror -O
+         -Wall -Wno-long-long -Werror -O 
  
 
 ############################## do not change ###################################

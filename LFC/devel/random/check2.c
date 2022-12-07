@@ -62,11 +62,10 @@ static void read_state(void)
    fp=fopen(".tmp","r");
 
    for (k=0;k<ns;k++)
-   if (fscanf(fp,"%d",&state[k]) != 1)   
-   
+      fscanf(fp,"%d",&state[k]);
+
    for (k=0;k<N;k++)
-   if(fscanf(fp,"%f",&r_old[k]) != 1)
-	
+      fscanf(fp,"%f",&r_old[k]);
 
    fclose(fp);
    remove(".tmp");

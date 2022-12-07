@@ -10,10 +10,10 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#define M 0.1
-#define W 0.1
-
-#define N 5
+#define N 64
+#define M 1.0
+#define W 1.0
+#define Delta 0.5
 
 #if defined MAIN_PROGRAM
   #define EXTERN
