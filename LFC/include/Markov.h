@@ -3,6 +3,7 @@
 
 #ifndef MARKOV_C
 extern void sweep(int *a);
+extern void corr(double *c);
 #endif
 
 #endif

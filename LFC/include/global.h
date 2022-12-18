@@ -13,7 +13,8 @@
 #define N 64
 #define M 1.0
 #define W 1.0
-#define Delta 0.5
+#define Delta 1.6
+#define N_therm 1000
 
 #if defined MAIN_PROGRAM
   #define EXTERN
