@@ -1,0 +1,3 @@
+decovariance_time	contains the programs that evaluate the needed time tau to decovariate
+			the observable made in the i-th path (i-th sweep) to the observable
+			made in the (i+tau)-th path
