@@ -6,10 +6,16 @@
  * building of the Markov chain thanks to Metropolis method
  *
  * The externally accessible functions are
- * 	void sweep()
+ * 	void sweep(int *acc)
  * 		for a given physical system and a given path (hence a given
  * 		action), it gives the new path, as a Markov chain with the
  * 		Metropolis method
+ *
+ * 	void corr(double *c[])
+ * 		gives the correlation function between the x operator at a
+ * 		generic i-th time and the same aoperator at the (i+t)-th
+ * 		time. This is ensured by time translation invariance of the
+ * 		system
  *
  *
  * Version 1.0
@@ -37,6 +43,20 @@ void sweep(int *acc){
 			xx[i] += 2*Delta*(randv[2*i]-.5);
 			*acc += 1;
 		}
+	}
+}
+
+void corr(double *c){
+	int t, k;
+	for(k=0; k<N; k++){
+		c[k]=0;
+	}
+	
+	for(t=0; t<N; t++){
+		for(k=0; k<N; k++){
+			c[t] += xx[k]*xx[(k+t)%N];
+		}
+		c[t]/=N;
 	}
 }
 
