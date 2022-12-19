@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = correlation 
+MAIN = correlation correlation_Dbin
 
 MYACTION = my_action
 
